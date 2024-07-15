@@ -19,7 +19,7 @@ Mark todo items as complete or incomplete
 User authentication and profile management
 Installation
 Clone the repository:
-git clone https://github.com/muhammadmaarij/mern-todo-web.git
+git clone https://github.com/Chukwuskindall/todo-app-web.git
 cd mern-todo-web
 Install backend dependencies:
 cd server
