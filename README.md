@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+MERN Todo Web Application
+This project implements a web-based Todo application using the MERN stack (MongoDB, Express, React, Node.js). The app allows users to create, read, update, and delete todo items, helping them manage their tasks efficiently.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Table of Contents
+Introduction
+Features
+Installation
+Usage
+API Endpoints
+Project Structure
+Introduction
+The MERN Todo Web Application is designed to help users manage their daily tasks. With a simple and intuitive interface, users can easily add, update, delete, and mark tasks as complete. The application uses MongoDB for data storage, Express and Node.js for the backend, and React for the frontend.
 
-## Available Scripts
+Features
+Add new todo items
+Update existing todo items
+Delete todo items
+Mark todo items as complete or incomplete
+User authentication and profile management
+Installation
+Clone the repository:
+git clone https://github.com/muhammadmaarij/mern-todo-web.git
+cd mern-todo-web
+Install backend dependencies:
+cd server
+npm install
+Install frontend dependencies:
+cd ../client
+npm install
+Set up environment variables:
+Create a .env file in the server directory and add your environment variables:
 
-In the project directory, you can run:
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+Run the application:
+Backend:
+cd server
+npm start
+The backend server will start on http://localhost:5000.
 
-### `npm start`
+Frontend:
+cd ../client
+npm start
+The frontend will start on http://localhost:3000.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Usage
+Open your web browser and navigate to http://localhost:3000.
+Sign up or log in to your account.
+Add new tasks using the input field.
+Update or delete tasks by clicking the respective buttons next to each task.
+Mark tasks as complete or incomplete by clicking the checkbox.
+API Endpoints
+Todos
+GET /api/todos: Retrieve all todos
+POST /api/todos: Create a new todo
+PUT /api/todos/:id: Update an existing todo
+DELETE /api/todos/:id: Delete a todo
+Users
+POST /api/users/signup: Sign up a new user
+POST /api/users/login: Log in a user
+GET /api/users/profile: Retrieve user profile (authenticated users only)
+Project Structure
+mern-todo-web/
+│
+├── server/                  # Backend code (Node.js, Express, MongoDB)
+│   ├── controllers/         # Controller files for handling requests
+│   ├── models/              # Database models
+│   ├── routes/              # Route definitions
+│   ├── middlewares/         # Middleware functions
+│   ├── config/              # Configuration files
+│   ├── .env                 # Environment variables
+│   ├── server.js            # Main server file
+│   └── package.json         # Backend dependencies
+│
+├── client/                  # Frontend code (React)
+│   ├── public/              # Public files
+│   ├── src/                 # Source files
+│   │   ├── components/      # Reusable React components
+│   │   ├── pages/           # React pages
+│   │   ├── App.js           # Main React component
+│   │   ├── index.js         # Entry point for React
+│   └── package.json         # Frontend dependencies
+│
+└── README.md                # Project README file
